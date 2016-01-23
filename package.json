@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cresencio/easy-starter/issues"
   },
-  "homepage": "https://github.com/cresencio/easy-starter#readme"
+  "homepage": "https://github.com/cresencio/easy-starter#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
