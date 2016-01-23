@@ -1,0 +1,19 @@
+{
+  "name": "easy-starter",
+  "version": "1.0.0",
+  "description": "This is a simple project folder for use with the easydevtuts tutorials",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cresencio/easy-starter.git"
+  },
+  "keywords": [
+    "test",
+    "demo"
+  ],
+  "author": "@cresencio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cresencio/easy-starter/issues"
+  },
+  "homepage": "https://github.com/cresencio/easy-starter#readme"
+}
