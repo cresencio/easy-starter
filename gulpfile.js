@@ -1,13 +1,24 @@
-var gulp = require('gulp');
+var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
 
-// Static server
-gulp.task('server', function() {
+// Static Server + watching scss/html files
+gulp.task('server', ['sass'], function() {
+
     browserSync.init({
-        server: {
-            baseDir: "./"
-        }
+        server: "./dist"
     });
+
+    gulp.watch("src/scss/*.scss", ['sass']);
+    gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default',['server']);
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("src/scss/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("dist/css"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('default', ['server']);
